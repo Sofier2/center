@@ -3489,3 +3489,85 @@ body {
 .trial {
   overflow: visible;
 }
+
+/* Clean phone hero composition. */
+@media (max-width: 760px) {
+  .hero {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 14px 34px;
+    overflow: hidden;
+  }
+
+  .hero-copy {
+    width: 100%;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 4px;
+  }
+
+  .girl-scene {
+    width: 100%;
+    min-height: 470px;
+    overflow: hidden;
+    place-items: end center;
+  }
+
+  .girl-scene::before {
+    left: 50%;
+    top: 8%;
+    width: min(118vw, 470px);
+    height: min(118vw, 470px);
+    background:
+      radial-gradient(circle at 48% 44%, rgba(255, 255, 255, 0.76) 0 7%, transparent 8% 100%),
+      repeating-conic-gradient(from 14deg, rgba(124, 58, 237, 0.16) 0deg 2deg, transparent 2deg 24deg),
+      radial-gradient(circle at 64% 30%, rgba(56, 201, 255, 0.28), transparent 36%),
+      radial-gradient(circle at 42% 60%, rgba(124, 58, 237, 0.18), transparent 46%);
+    opacity: 0.78;
+    transform: translateX(-50%);
+  }
+
+  .girl-scene::after,
+  .tech-orbit,
+  .circuit-lines {
+    display: none;
+  }
+
+  .hero-girl {
+    width: min(96vw, 430px);
+    max-width: none;
+    max-height: 470px;
+    object-position: bottom center;
+  }
+
+  .spark-field {
+    inset: 0 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    padding: 22px 10px 30px;
+  }
+
+  .girl-scene {
+    min-height: 420px;
+  }
+
+  .girl-scene::before {
+    width: min(122vw, 420px);
+    height: min(122vw, 420px);
+  }
+
+  .hero-girl {
+    width: min(96vw, 390px);
+    max-height: 420px;
+  }
+}
