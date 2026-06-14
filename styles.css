@@ -3249,6 +3249,101 @@ body {
   }
 }
 
+/* Mobile hero overflow guard. */
+@media (max-width: 760px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    overflow: hidden;
+  }
+
+  .hero-visual,
+  .girl-scene {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .girl-scene {
+    min-height: clamp(380px, 108vw, 450px);
+  }
+
+  .girl-scene::before {
+    right: 0;
+    width: 96%;
+    height: 86%;
+  }
+
+  .girl-scene::after {
+    right: 6%;
+    width: 82%;
+    height: 72%;
+  }
+
+  .hero-girl {
+    width: min(100%, 410px);
+    max-width: 100%;
+    max-height: 430px;
+  }
+
+  .tech-orbit {
+    inset: 8% 4% auto auto;
+    width: 86%;
+    height: 70%;
+    max-width: 100%;
+    opacity: 0.72;
+    transform-origin: center;
+  }
+
+  .tech-orbit span {
+    min-width: 40px;
+    height: 30px;
+    padding: 0 9px;
+    font-size: 11px;
+  }
+
+  .tech-orbit span:nth-child(1) {
+    top: 8%;
+    right: 10%;
+  }
+
+  .tech-orbit span:nth-child(2) {
+    left: 6%;
+    top: 44%;
+  }
+
+  .tech-orbit span:nth-child(3) {
+    right: 9%;
+    bottom: 10%;
+  }
+
+  .circuit-lines {
+    inset: 3% 0 auto auto;
+    width: 82%;
+  }
+}
+
+@media (max-width: 420px) {
+  .girl-scene {
+    min-height: clamp(350px, 104vw, 400px);
+  }
+
+  .hero-girl {
+    width: min(100%, 380px);
+    max-height: 390px;
+  }
+
+  .tech-orbit {
+    inset: 8% 5% auto auto;
+    width: 82%;
+    height: 68%;
+  }
+}
+
 .trial {
   overflow: visible;
 }
