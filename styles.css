@@ -478,6 +478,12 @@ h3 {
   animation-delay: -2.6s;
 }
 
+.tech-orbit .code-badge {
+  color: #4f32e8;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
 .tech-orbit .robot-badge {
   min-width: 48px;
   padding: 0;
