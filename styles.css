@@ -853,6 +853,16 @@ h3 {
   font-weight: 950;
 }
 
+.card-icon.code::before {
+  content: "</>";
+  color: var(--white);
+  font-family: "Geologica", "Manrope", sans-serif;
+  font-size: 21px;
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
 .featured .card-icon {
   color: var(--blue-deep);
   background: var(--white);
